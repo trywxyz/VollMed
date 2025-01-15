@@ -21,13 +21,14 @@ public class SecurityFilter extends OncePerRequestFilter {
 
 
 
-    @Autowired
-    private TokenService tokenService;
+    private final TokenService tokenService;
 
+    private final UserRepository repository;
 
-    @Autowired
-    UserRepository repository;
-
+    public SecurityFilter(TokenService tokenService, UserRepository repository) {
+        this.tokenService = tokenService;
+        this.repository = repository;
+    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
@@ -54,6 +55,8 @@ public class SecurityFilter extends OncePerRequestFilter {
        if(authHeader != null){
            return authHeader.replace("Bearer", "");
        }
-        return authHeader.replace("Bearer", "");
+        return null;
     }
+
+
 }
