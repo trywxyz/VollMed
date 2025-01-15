@@ -1,4 +1,4 @@
-package medi.voll.api.medico;
+package medi.voll.api.domain.medico;
 
 
 import jakarta.validation.Valid;
@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import medi.voll.api.endereco.DadosEndereco;
+import medi.voll.api.domain.endereco.DadosEndereco;
 
 //NOSSO RECORD SEMPRE APENAS PARA MAPEAR CADA ELEMENTO JSON OU SEJA 'nome, cep, endereco, idade' DE MEDICO
 public record DadosCadastroMedico(

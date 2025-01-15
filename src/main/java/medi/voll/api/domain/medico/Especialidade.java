@@ -1,4 +1,4 @@
-package medi.voll.api.medico;
+package medi.voll.api.domain.medico;
 
 
 // O ENUM SERVE PARA QUANDO TEMOS POSSIBILIDADES DENTRO DE UMA VARIAVEL
