@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import medi.voll.api.endereco.DadosEnderecoMedico;
+import medi.voll.api.endereco.DadosEndereco;
 
 //NOSSO RECORD SEMPRE APENAS PARA MAPEAR CADA ELEMENTO JSON OU SEJA 'nome, cep, endereco, idade' DE MEDICO
 public record DadosCadastroMedico(
@@ -31,5 +31,5 @@ public record DadosCadastroMedico(
 
         @NotNull
         @Valid //ELE VALIDA QUE O DTO EXISTE OUTRO DTO DENTRO
-        DadosEnderecoMedico endereco) {
+        DadosEndereco endereco) {
 }

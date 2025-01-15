@@ -19,7 +19,7 @@ public class Endereco {
     private String cidade;
     private String uf;
 
-    public Endereco(DadosEnderecoMedico dados) {
+    public Endereco(DadosEndereco dados) {
         this.logradouro = dados.logradouro();
         this.bairro = dados.bairro();
         this.cep = dados.cep();
@@ -30,7 +30,7 @@ public class Endereco {
 
     }
 
-    public void atualizarInformacoes(DadosEnderecoMedico dados) {
+    public void atualizarInformacoes(DadosEndereco dados) {
         if (dados.logradouro() != null) {
             this.logradouro = logradouro;
 
